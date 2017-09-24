@@ -1,8 +1,29 @@
 # Elementary Remix (Xfce)
 
 Mostly based on [varlesh/elementary-add][varlesh/elementary-add].
-This theme is intended to be used with a dark panel.
-This theme depends on [``elementary-xfce``][shimmerproject/elementary-xfce].
+This theme is intended to be used with a dark panel,
+it depends on [``elementary-xfce``][shimmerproject/elementary-xfce].
+
+## Install
+
+Install is as simple as possible, simply type:
+
+```
+rake
+```
+
+Theme will be installed in ``/usr/local/share/icons``, but you can choose
+another location:
+
+```
+rake install[/home/somebody/.local/share/icons]
+```
+
+To uninstall:
+
+```
+rake uninstall
+```
 
 ## Icons (sources, credits)
 
