@@ -66,6 +66,9 @@ class Setup
     themes.map { |d| path.join(d) }
   end
 
+  # Installables (as from => dest)
+  #
+  # @return [Hash]
   def installables
     items = conf.fetch('installables')
 
