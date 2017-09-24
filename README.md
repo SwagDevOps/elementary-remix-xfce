@@ -2,7 +2,7 @@
 
 Mostly based on [varlesh/elementary-add][varlesh/elementary-add].
 This theme is intended to be used with a dark panel.
-This theme depends on ``[elementary-xfce][shimmerproject/elementary-xfce]``.
+This theme depends on [``elementary-xfce``][shimmerproject/elementary-xfce].
 
 ## Icons (sources, credits)
 
