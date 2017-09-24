@@ -5,13 +5,13 @@ require 'open3'
 require 'pathname'
 
 default_path = '/usr/local/share/icons'
-theme        = 'elementary-remix-xfce'
+themes       = ['elementary-remix-xfce']
 installables = {
-  'apps/' => nil,
-  'devices/' => nil,
-  'index.theme' => nil,
-  'panel/' => nil,
-  'places/' => nil,
+  'elementary-remix-xfce/apps/' => nil,
+  'elementary-remix-xfce/devices/' => nil,
+  'elementary-remix-xfce/index.theme' => nil,
+  'elementary-remix-xfce/panel/' => nil,
+  'elementary-remix-xfce/places/' => nil,
 }
 
 # install ------------------------------------------------------------
@@ -21,9 +21,9 @@ task :install, [:path] => [:uninstall] do |task, args|
   path = Pathname.new(args[:path] || default_path)
   installables
     .keys
-    .each { |k| installables[k] = Pathname.new(path).join(theme, k) }
+    .each { |k| installables[k] = Pathname.new(path).join(k) }
 
-  mkdir_p(Pathname.new(path).join(theme))
+  themes.each { |theme| mkdir_p(Pathname.new(path).join(theme)) }
   installables.sort.to_h.each { |k, v| cp_r(k, v) }
 
   Rake::Task['install:cache'].execute(path: path)
@@ -31,12 +31,14 @@ end
 
 task :'install:cache', [:path] do |task, args|
   path = Pathname.new(args[:path] || default_path)
-  tdir = Pathname.new(path).join(theme)
-
   nbin = 'gtk-update-icon-cache'
   xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
 
-  (sh(xupd, tdir.to_s) if xupd) unless Dir.glob("#{tdir}/*").empty?
+  themes.each do |theme|
+    tdir = Pathname.new(path).join(theme)
+
+    (sh(xupd, tdir.to_s) if xupd) unless Dir.glob("#{tdir}/*").empty?
+  end
 end
 
 # uninstall ----------------------------------------------------------
@@ -45,7 +47,9 @@ desc 'Uninstall theme'
 task :uninstall, [:path] do |task, args|
   path = Pathname.new(args[:path] || default_path)
 
-  rm_r(Pathname.new(path).join(theme), force: true)
+  themes.each do |theme|
+    rm_r(Pathname.new(path).join(theme), force: true)
+  end
 end
 
 task default: [:install]
