@@ -17,7 +17,7 @@ installables = {
 # install ------------------------------------------------------------
 
 desc 'Install theme'
-task 'install', [:path] => [:uninstall] do |task, args|
+task :install, [:path] => [:uninstall] do |task, args|
   path = Pathname.new(args[:path] || default_path)
   installables
     .keys
@@ -29,18 +29,20 @@ task 'install', [:path] => [:uninstall] do |task, args|
   Rake::Task['install:cache'].execute(path: path)
 end
 
-task 'install:cache', [:path] do |task, args|
+task :'install:cache', [:path] do |task, args|
   path = Pathname.new(args[:path] || default_path)
+  tdir = Pathname.new(path).join(theme)
+
   nbin = 'gtk-update-icon-cache'
   xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
 
-  sh(xupd, Pathname.new(path).join(theme).to_s) if xupd
+  (sh(xupd, tdir.to_s) if xupd) unless Dir.glob("#{tdir}/*").empty?
 end
 
 # uninstall ----------------------------------------------------------
 
 desc 'Uninstall theme'
-task 'uninstall', [:path] do |task, args|
+task :uninstall, [:path] do |task, args|
   path = Pathname.new(args[:path] || default_path)
 
   rm_r(Pathname.new(path).join(theme), force: true)
