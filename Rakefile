@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pp'
 require 'open3'
 require 'pathname'
 
@@ -33,7 +34,7 @@ task 'install:cache', [:path] do |task, args|
   nbin = 'gtk-update-icon-cache'
   xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
 
-  sh(xupd, Pathname.new(path).join(theme).to_s) unless xupd.empty?
+  sh(xupd, Pathname.new(path).join(theme).to_s) if xupd
 end
 
 # uninstall ----------------------------------------------------------
