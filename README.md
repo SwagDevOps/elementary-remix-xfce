@@ -1,8 +1,9 @@
 # Elementary Remix (Xfce)
 
-Mostly based on [varlesh/elementary-add][varlesh/elementary-add].
+This theme is mostly based on
+[varlesh/elementary-add][varlesh/elementary-add].<br>
 This theme is intended to be used with a dark panel,
-it depends on [``elementary-xfce``][shimmerproject/elementary-xfce].
+it DEPENDS on [``elementary-xfce``][shimmerproject/elementary-xfce].
 
 ## Install
 
