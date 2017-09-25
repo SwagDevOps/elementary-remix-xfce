@@ -37,6 +37,7 @@ rake uninstall
 | apps/shotwell            | [spg76][spg76]                   | unknown |
 | apps/emacs               | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
 | panel                    | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
+| notifications            | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
 
 [elementaryplus]: https://github.com/mank319/elementaryPlus
 [varlesh/elementary-add]: https://github.com/varlesh/elementary-add
