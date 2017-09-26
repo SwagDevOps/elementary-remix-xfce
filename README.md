@@ -9,21 +9,21 @@ it DEPENDS on [``elementary-xfce``][shimmerproject/elementary-xfce].
 
 Install is as simple as possible, simply type:
 
-```
-rake
+```sh
+sudo rake install
 ```
 
 Theme will be installed in ``/usr/local/share/icons``, but you can choose
 another location:
 
-```
-rake install[/home/somebody/.local/share/icons]
+```sh
+sudo rake install[/home/somebody/.local/share/icons]
 ```
 
 To uninstall:
 
 ```
-rake uninstall
+sudo rake uninstall
 ```
 
 ## Icons (sources, credits)
