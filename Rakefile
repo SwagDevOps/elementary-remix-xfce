@@ -4,6 +4,7 @@ require 'pp'
 require 'open3'
 require 'pathname'
 require 'yaml'
+require 'rake/clean'
 
 # setup --------------------------------------------------------------
 
@@ -69,13 +70,21 @@ task default: [:caches]
 task :caches do
   nbin = 'gtk-update-icon-cache'
   xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
+  fstt = File.stat(Dir.pwd)
 
   if xupd
     Setup.new.themes.each do |d|
-      sh(xupd, d.to_s) unless Dir.glob("#{d}/*").empty?
+      theme_dir = Pathname.new(d)
+
+      sh(xupd, theme_dir.to_s)
+      Dir.glob("#{theme_dir}/icon-theme.cache").each do |f|
+        FileUtils.chown(fstt.uid, fstt.gid, f)
+      end
     end
   end
 end
+
+CLOBBER << FileList['./*/icon-theme.cache']
 
 # install ------------------------------------------------------------
 
