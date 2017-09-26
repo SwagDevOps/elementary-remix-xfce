@@ -5,40 +5,6 @@ require 'open3'
 require 'pathname'
 require 'yaml'
 
-# install ------------------------------------------------------------
-
-desc 'Install theme'
-task :install, [:path] => [:uninstall] do |task, args|
-  setup = Setup.new(args[:path])
-
-  setup.directories.each { |d| mkdir_p(d) }
-  setup.installables.each { |k, v| cp_r(k, v) }
-
-  Rake::Task['install:cache'].execute(path: setup.path)
-end
-
-task :'install:cache', [:path] do |task, args|
-  nbin = 'gtk-update-icon-cache'
-  xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
-
-  if xupd
-    Setup.new(args[:path]).directories.each do |d|
-      sh(xupd, d.to_s) unless Dir.glob("#{d}/*").empty?
-    end
-  end
-end
-
-# uninstall ----------------------------------------------------------
-
-desc 'Uninstall theme'
-task :uninstall, [:path] do |task, args|
-  Setup.new(args[:path]).directories.each { |d| rm_r(d, force: true) }
-end
-
-# default ------------------------------------------------------------
-
-task default: [:install]
-
 # setup --------------------------------------------------------------
 
 class Setup
@@ -56,7 +22,7 @@ class Setup
   end
 
   def themes
-    conf.fetch('themes')
+    conf.fetch('themes').keys
   end
 
   # Directories (for themes)
@@ -70,9 +36,14 @@ class Setup
   #
   # @return [Hash]
   def installables
-    items = conf.fetch('installables')
+    items = {}
+    conf.fetch('themes').each do |k, v|
+      v.each do |item|
+        items[Pathname.new(k).join(item)] = path.join(k, item)
+      end
+    end
 
-    Hash[items.map { |x| [x, Pathname.new(path).join(x)] }]
+    items
   end
 
   protected
@@ -87,4 +58,39 @@ class Setup
 
     manifest
   end
+end
+
+# default ------------------------------------------------------------
+
+task default: [:caches]
+
+# cache --------------------------------------------------------------
+
+task :caches do
+  nbin = 'gtk-update-icon-cache'
+  xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
+
+  if xupd
+    Setup.new.themes.each do |d|
+      sh(xupd, d.to_s) unless Dir.glob("#{d}/*").empty?
+    end
+  end
+end
+
+# install ------------------------------------------------------------
+
+desc 'Install theme'
+task :install, [:path] => [:caches, :uninstall] do |task, args|
+  setup = Setup.new(args[:path])
+
+  setup.installables.keys.map { |v| v.realpath } # Errno::ENOENT
+  setup.directories.each { |d| mkdir_p(d) }
+  setup.installables.each { |k, v| cp_r(k, v) }
+end
+
+# uninstall ----------------------------------------------------------
+
+desc 'Uninstall theme'
+task :uninstall, [:path] do |task, args|
+  Setup.new(args[:path]).directories.each { |d| rm_r(d, force: true) }
 end

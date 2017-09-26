@@ -1,10 +1,10 @@
 ---
 icons_path: '/usr/local/share/icons'
 themes:
-  - 'elementary-remix-xfce'
-installables:
-  - 'elementary-remix-xfce/apps/'
-  - 'elementary-remix-xfce/devices/'
-  - 'elementary-remix-xfce/index.theme'
-  - 'elementary-remix-xfce/panel/'
-  - 'elementary-remix-xfce/places/'
+  elementary-remix-xfce:
+    - 'icon-theme.cache'
+    - 'apps/'
+    - 'devices/'
+    - 'index.theme'
+    - 'panel/'
+    - 'places/'
