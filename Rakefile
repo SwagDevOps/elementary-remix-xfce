@@ -63,6 +63,8 @@ end
 
 module FileUtils
   # @param [String|Pathname|Object] path
+  #
+  # @see http://manpages.ubuntu.com/manpages/bionic/man8/update-icon-caches.8.html
   # @see https://github.com/ruby/rake/blob/c963dc0e96b4454665fa5be2ead04181426fd220/lib/rake/file_utils.rb#L43
   # @see http://manpages.ubuntu.com/manpages/bionic/man8/update-icon-caches.8.html
   def update_icon_cache(path, &block)
