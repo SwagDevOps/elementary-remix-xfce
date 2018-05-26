@@ -36,6 +36,7 @@ sudo rake uninstall
 | apps/viewnior            | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/libreoffice         | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/firefox             | [loklaan][loklaan]               | unknown |
+| apps/gitkraken           | [boosterdev][gitkraken.svg]      | unknown |
 | apps/shotwell            | [spg76][spg76]                   | unknown |
 | apps/emacs               | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
 | panel                    | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
@@ -47,3 +48,4 @@ sudo rake uninstall
 [xendke/elementaryos-emacs-icon]: https://github.com/xendke/elementaryos-emacs-icon
 [loklaan]: https://loklaan.deviantart.com/
 [spg76]: https://spg76.deviantart.com/
+[gitkraken.svg]: https://gist.github.com/boosterdev/fa6133c36b3570df96719233e007f65a
