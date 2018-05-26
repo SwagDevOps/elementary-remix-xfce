@@ -4,3 +4,7 @@ themes:
   elementary-remix-xfce:
     - 'index.theme'
     - 'apps/'
+  elementary-remix-xfce-dark:
+    - 'index.theme'
+    - 'apps/'
+    - 'panel/'
