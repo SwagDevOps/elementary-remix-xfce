@@ -95,5 +95,5 @@ end
 
 desc 'Uninstall theme'
 task :uninstall, [:path] do |task, args|
-  Setup.new(args[:path]).directories.each { |d| rm_r(d, force: true) }
+  Setup.new(args[:path]).directories.each { |d| rm_rf(d) }
 end
