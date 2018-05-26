@@ -61,6 +61,17 @@ class Setup
   end
 end
 
+module FileUtils
+  # @param [String|Pathname|Object] path
+  # @see https://github.com/ruby/rake/blob/c963dc0e96b4454665fa5be2ead04181426fd220/lib/rake/file_utils.rb#L43
+  # @see http://manpages.ubuntu.com/manpages/bionic/man8/update-icon-caches.8.html
+  def update_icon_cache(path, &block)
+    cmd = ['gtk-update-icon-cache', '--force', '--quiet', path.to_s]
+
+    sh(*cmd, &block)
+  end
+end
+
 # default ------------------------------------------------------------
 
 task default: [:caches]
@@ -74,7 +85,7 @@ CLOBBER << FileList['./*/icon-theme.cache']
 task :caches do
   fstt = File.stat(Dir.pwd)
   Setup.new.themes.each do |theme|
-    sh('update-icon-caches', theme)
+    update_icon_cache(theme)
     chown(fstt.uid, fstt.gid, "#{theme}/icon-theme.cache")
   end
 end
@@ -88,7 +99,7 @@ task :install, [:path] => [:uninstall] do |task, args|
   setup.installables.keys.map { |v| v.realpath } # Errno::ENOENT
   setup.directories.each { |d| mkdir_p(d) }
   setup.installables.each { |k, v| cp_r(k, v) }
-  setup.directories.each { |d| sh('update-icon-caches', d.to_s) }
+  setup.directories.each { |d| update_icon_cache(d) }
 end
 
 # uninstall ----------------------------------------------------------
