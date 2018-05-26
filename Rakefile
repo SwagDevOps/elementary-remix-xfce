@@ -65,36 +65,30 @@ end
 
 task default: [:caches]
 
+# clobber ------------------------------------------------------------
+
+CLOBBER << FileList['./*/icon-theme.cache']
+
 # cache --------------------------------------------------------------
 
 task :caches do
-  nbin = 'gtk-update-icon-cache'
-  xupd = Open3.capture3('which', nbin)[0].lines.map(&:chomp)[0]
   fstt = File.stat(Dir.pwd)
-
-  if xupd
-    Setup.new.themes.each do |d|
-      theme_dir = Pathname.new(d)
-
-      sh(xupd, theme_dir.to_s)
-      Dir.glob("#{theme_dir}/icon-theme.cache").each do |f|
-        FileUtils.chown(fstt.uid, fstt.gid, f)
-      end
-    end
+  Setup.new.themes.each do |theme|
+    sh('update-icon-caches', theme)
+    chown(fstt.uid, fstt.gid, "#{theme}/icon-theme.cache")
   end
 end
-
-CLOBBER << FileList['./*/icon-theme.cache']
 
 # install ------------------------------------------------------------
 
 desc 'Install theme'
-task :install, [:path] => [:caches, :uninstall] do |task, args|
+task :install, [:path] => [:uninstall] do |task, args|
   setup = Setup.new(args[:path])
 
   setup.installables.keys.map { |v| v.realpath } # Errno::ENOENT
   setup.directories.each { |d| mkdir_p(d) }
   setup.installables.each { |k, v| cp_r(k, v) }
+  setup.directories.each { |d| sh('update-icon-caches', d.to_s) }
 end
 
 # uninstall ----------------------------------------------------------
