@@ -30,6 +30,7 @@ sudo rake uninstall
 
 | name                     | source                           | license |
 | ------------------------ | -------------------------------- | ------- |
+| apps/code                | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/vlc                 | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/messengerfordesktop | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox          | [elementaryplus][elementaryplus] | GNU GPL |
