@@ -40,6 +40,7 @@ sudo rake uninstall
 | apps/shotwell            | [spg76][spg76]                   | unknown |
 | apps/viewnior            | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox          | [elementaryplus][elementaryplus] | GNU GPL |
+| mimes/virtualbox         | [mimes for virtualbox][[virtualbox-mimes] | GNU GPL |
 | apps/vlc                 | [elementaryplus][elementaryplus] | GNU GPL |
 | panel                    | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
 
@@ -51,3 +52,4 @@ sudo rake uninstall
 [loklaan]: https://loklaan.deviantart.com/
 [spg76]: https://spg76.deviantart.com/
 [gitkraken.svg]: https://gist.github.com/boosterdev/fa6133c36b3570df96719233e007f65a
+[virtualbox-mimes]: https://www.gnome-look.org/p/1012101/

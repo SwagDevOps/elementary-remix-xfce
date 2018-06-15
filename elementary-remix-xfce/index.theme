@@ -4,7 +4,7 @@ Comment=Smooth modern theme for Xfce
 Inherits=elementary-xfce,adwaita,gnome,hicolor
 
 Example=directory-x-normal
-Directories=apps/16,apps/24,apps/32,apps/48,apps/64,apps/96,apps/128,
+Directories=apps/16,apps/24,apps/32,apps/48,apps/64,apps/96,apps/128,mimes/16,mimes/24,mimes/32,mimes/48,mimes/64,
 
 [apps/16]
 Size=16
@@ -51,4 +51,34 @@ Size=16
 Context=Applications
 MinSize=8
 MaxSize=512
+Type=Scalable
+
+[mimes/16]
+Size=16
+Context=MimeTypes
+Type=Scalable
+
+[mimes/22]
+Size=22
+Context=MimeTypes
+Type=Scalable
+
+[mimes/24]
+Size=24
+Context=MimeTypes
+Type=Scalable
+
+[mimes/32]
+Size=32
+Context=MimeTypes
+Type=Scalable
+
+[mimes/48]
+Size=48
+Context=MimeTypes
+Type=Scalable
+
+[mimes/64]
+Size=64
+Context=MimeTypes
 Type=Scalable
