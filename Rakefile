@@ -95,7 +95,7 @@ end
 # install ------------------------------------------------------------
 
 desc 'Install theme'
-task :install, [:path] => [:uninstall] do |task, args|
+task :install, [:path] => [:caches, :uninstall] do |task, args|
   setup = Setup.new(args[:path])
 
   setup.installables.keys.map { |v| v.realpath } # Errno::ENOENT
