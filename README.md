@@ -40,7 +40,7 @@ sudo rake uninstall
 | apps/shotwell            | [spg76][spg76]                   | unknown |
 | apps/viewnior            | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox          | [elementaryplus][elementaryplus] | GNU GPL |
-| mimes/virtualbox         | [mimes for virtualbox][virtualbox-mimes] | GNU GPL |
+| mimes/virtualbox         | [mimes for virtualbox][virtualbox-mimes] | unknown |
 | apps/vlc                 | [elementaryplus][elementaryplus] | GNU GPL |
 | panel                    | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
 
