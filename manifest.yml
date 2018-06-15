@@ -3,10 +3,12 @@ icons_path: '/usr/local/share/icons'
 themes:
   elementary-remix-xfce:
     - 'index.theme'
+    - 'icon-theme.cache'
     - 'apps/'
     - 'mimes/'
   elementary-remix-xfce-dark:
     - 'index.theme'
+    - 'icon-theme.cache'
     - 'apps/'
     - 'mimes/'
     - 'panel/'

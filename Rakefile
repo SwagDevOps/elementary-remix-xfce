@@ -101,7 +101,6 @@ task :install, [:path] => [:caches, :uninstall] do |task, args|
   setup.installables.keys.map { |v| v.realpath } # Errno::ENOENT
   setup.directories.each { |d| mkdir_p(d) }
   setup.installables.each { |k, v| cp_r(k, v) }
-  setup.directories.each { |d| update_icon_cache(d) }
 end
 
 # uninstall ----------------------------------------------------------
