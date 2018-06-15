@@ -40,6 +40,7 @@ sudo rake uninstall
 | apps/shotwell             | [spg76][spg76]                   | unknown |
 | apps/viewnior             | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox           | [elementaryplus][elementaryplus] | GNU GPL |
+| mimes/text-x-readme       | [Elementary for KDE][elementary-kde] | GNU GPL |
 | mimes/application-x-theme | [mimes for elementary][elementary-mimes] | unknown |
 | mimes/virtualbox          | [mimes for virtualbox][virtualbox-mimes] | unknown |
 | apps/vlc                  | [elementaryplus][elementaryplus] | GNU GPL |
@@ -55,3 +56,4 @@ sudo rake uninstall
 [gitkraken.svg]: https://gist.github.com/boosterdev/fa6133c36b3570df96719233e007f65a
 [virtualbox-mimes]: https://www.gnome-look.org/p/1012101/
 [elementary-mimes]: https://www.gnome-look.org/p/1012293/
+[elementary-kde]: https://github.com/DarkknightAK/elementary-kde
