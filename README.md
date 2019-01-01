@@ -33,7 +33,7 @@ sudo rake uninstall
 | apps/code                 | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/emacs                | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
 | apps/firefox              | [loklaan][loklaan]               | unknown |
-| apps/gitkraken            | [boosterdev][gitkraken.svg]      | unknown |
+| apps/gitkraken            | [cbrnix/Newaita][cbrnix/Newaita] | CC BY-NC-SA 3.0 |
 | apps/libreoffice          | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/liferea              | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/messengerfordesktop  | [elementaryplus][elementaryplus] | GNU GPL |
@@ -53,6 +53,7 @@ sudo rake uninstall
 [xendke/elementaryos-emacs-icon]: https://github.com/xendke/elementaryos-emacs-icon
 [loklaan]: https://loklaan.deviantart.com/
 [spg76]: https://spg76.deviantart.com/
+[cbrnix/Newaita]: https://github.com/cbrnix/Newaita
 [gitkraken.svg]: https://gist.github.com/boosterdev/fa6133c36b3570df96719233e007f65a
 [virtualbox-mimes]: https://www.gnome-look.org/p/1012101/
 [elementary-mimes]: https://www.gnome-look.org/p/1012293/
