@@ -30,6 +30,7 @@ sudo rake uninstall
 
 | name                      | source                           | license |
 | ------------------------- | -------------------------------- | ------- |
+| apps/chromium             | [leaeasy/elementaryPlus][leaeasy/elementaryPlus] | GNU GPL |
 | apps/code                 | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/emacs                | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
 | apps/firefox              | [loklaan][loklaan]               | unknown |
@@ -58,3 +59,5 @@ sudo rake uninstall
 [virtualbox-mimes]: https://www.gnome-look.org/p/1012101/
 [elementary-mimes]: https://www.gnome-look.org/p/1012293/
 [elementary-kde]: https://github.com/DarkknightAK/elementary-kde
+[leaeasy/elementaryPlus]: https://github.com/leaeasy/elementaryPlus
+[//]: # (https://github.com/leaeasy/elementaryPlus/commit/4b41ffa167ef7e4c2ab10c8508371abbb1f7d81d)
