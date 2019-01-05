@@ -34,17 +34,30 @@ sudo rake uninstall
 | apps/appcode              | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/brasero              | [elementary extras Icons][elementary-extras] | GNU GPL |
 | apps/chromium             | [leaeasy/elementaryPlus][leaeasy/elementaryPlus] | GNU GPL |
+| apps/clion                | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/code                 | [elementaryplus][elementaryplus] | GNU GPL |
+| apps/datagrip             | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/emacs                | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
 | apps/firefox              | [loklaan][loklaan]               | unknown |
 | apps/gitkraken            | [cbrnix/Newaita][cbrnix/Newaita] | CC BY-NC-SA 3.0 |
+| apps/goland               | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/intellij             | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/jetbrains-toolbox    | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/liferea              | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/messengerfordesktop  | [elementaryplus][elementaryplus] | GNU GPL |
+| apps/phpstorm             | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/pitivi               | [elementary extras Icons][elementary-extras] | GNU GPL |
+| apps/pycharmedu           | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/pycharm              | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/resharpercpp         | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/resharper            | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/rider                | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/rubymine             | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/shotwell             | [spg76][spg76]                   | unknown |
 | apps/viewnior             | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox           | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/vlc                  | [elementaryplus][elementaryplus] | GNU GPL |
+| apps/webstorm             | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | mimes/application-x-theme | [mimes for elementary][elementary-mimes] | unknown |
 | mimes/text-x-readme       | [Elementary for KDE][elementary-kde] | GNU GPL |
 | mimes/virtualbox          | [mimes for virtualbox][virtualbox-mimes] | unknown |
