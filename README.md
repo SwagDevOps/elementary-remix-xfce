@@ -44,10 +44,10 @@ sudo rake uninstall
 | apps/shotwell             | [spg76][spg76]                   | unknown |
 | apps/viewnior             | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox           | [elementaryplus][elementaryplus] | GNU GPL |
-| mimes/text-x-readme       | [Elementary for KDE][elementary-kde] | GNU GPL |
-| mimes/application-x-theme | [mimes for elementary][elementary-mimes] | unknown |
-| mimes/virtualbox          | [mimes for virtualbox][virtualbox-mimes] | unknown |
 | apps/vlc                  | [elementaryplus][elementaryplus] | GNU GPL |
+| mimes/application-x-theme | [mimes for elementary][elementary-mimes] | unknown |
+| mimes/text-x-readme       | [Elementary for KDE][elementary-kde] | GNU GPL |
+| mimes/virtualbox          | [mimes for virtualbox][virtualbox-mimes] | unknown |
 | panel                     | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
 
 [elementary-extras]: https://www.deviantart.com/spg76/art/elementary-extras-Icons-215459969
