@@ -31,6 +31,7 @@ sudo rake uninstall
 | name                      | source                           | license |
 | ------------------------- | -------------------------------- | ------- |
 | apps/androidstudio        | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
+| apps/appcode              | [papirus-icon-theme][papirus-icon-theme] | GNU GPL |
 | apps/brasero              | [elementary extras Icons][elementary-extras] | GNU GPL |
 | apps/chromium             | [leaeasy/elementaryPlus][leaeasy/elementaryPlus] | GNU GPL |
 | apps/code                 | [elementaryplus][elementaryplus] | GNU GPL |
