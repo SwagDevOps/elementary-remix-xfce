@@ -30,6 +30,7 @@ sudo rake uninstall
 
 | name                      | source                           | license |
 | ------------------------- | -------------------------------- | ------- |
+| apps/brasero              | [elementary extras Icons][elementary-extras] | GNU GPL |
 | apps/chromium             | [leaeasy/elementaryPlus][leaeasy/elementaryPlus] | GNU GPL |
 | apps/code                 | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/emacs                | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
@@ -47,7 +48,7 @@ sudo rake uninstall
 | apps/vlc                  | [elementaryplus][elementaryplus] | GNU GPL |
 | panel                     | [shimmerproject/elementary-xfce][shimmerproject/elementary-xfce] | unknown |
 
-
+[elementary-extras]: https://www.deviantart.com/spg76/art/elementary-extras-Icons-215459969
 [elementaryplus]: https://github.com/mank319/elementaryPlus
 [varlesh/elementary-add]: https://github.com/varlesh/elementary-add
 [shimmerproject/elementary-xfce]: https://github.com/shimmerproject/elementary-xfce
