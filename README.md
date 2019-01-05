@@ -17,7 +17,7 @@ Theme will be installed in ``/usr/local/share/icons``, but you can choose
 another location:
 
 ```sh
-sudo rake install[/home/somebody/.local/share/icons]
+rake install[$(readlink -f ~)/.local/share/icons]
 ```
 
 To uninstall:
@@ -36,9 +36,9 @@ sudo rake uninstall
 | apps/emacs                | [xendke/elementaryos-emacs-icon][xendke/elementaryos-emacs-icon] | GNU GPL |
 | apps/firefox              | [loklaan][loklaan]               | unknown |
 | apps/gitkraken            | [cbrnix/Newaita][cbrnix/Newaita] | CC BY-NC-SA 3.0 |
-| apps/libreoffice          | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/liferea              | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/messengerfordesktop  | [elementaryplus][elementaryplus] | GNU GPL |
+| apps/pitivi               | [elementary extras Icons][elementary-extras] | GNU GPL |
 | apps/shotwell             | [spg76][spg76]                   | unknown |
 | apps/viewnior             | [elementaryplus][elementaryplus] | GNU GPL |
 | apps/virtualbox           | [elementaryplus][elementaryplus] | GNU GPL |
