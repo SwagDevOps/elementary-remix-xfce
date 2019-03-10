@@ -6,9 +6,11 @@ themes:
     - 'icon-theme.cache'
     - 'apps/'
     - 'mimes/'
+    - 'places/'
   elementary-remix-xfce-dark:
     - 'index.theme'
     - 'icon-theme.cache'
     - 'apps/'
     - 'mimes/'
+    - 'places/'
     - 'panel/'
