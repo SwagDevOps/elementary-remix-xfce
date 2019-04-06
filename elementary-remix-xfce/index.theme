@@ -9,20 +9,22 @@ Example=directory-x-normal
 
 Directories=apps/16,apps/22,apps/24,apps/32,apps/48,apps/64,apps/96,apps/128,mimes/16,mimes/22,mimes/24,mimes/32,mimes/48,mimes/64,places/16,places/22,places/24,places/32,places/48,places/64,places/128,places/symbolic
 
+# Applications -------------------------------------------------------
+
 [apps/16]
 Size=16
 Context=Applications
-Type=Scalable
+Type=Fixed
 
 [apps/22]
 Size=22
 Context=Applications
-Type=Scalable
+Type=Fixed
 
 [apps/24]
 Size=24
 Context=Applications
-Type=Scalable
+Type=Fixed
 
 [apps/32]
 Size=32
@@ -56,25 +58,27 @@ MinSize=8
 MaxSize=512
 Type=Scalable
 
+# MimeTypes ----------------------------------------------------------
+
 [mimes/16]
 Size=16
 Context=MimeTypes
-Type=Scalable
+Type=Fixed
 
 [mimes/22]
 Size=22
 Context=MimeTypes
-Type=Scalable
+Type=Fixed
 
 [mimes/24]
 Size=24
 Context=MimeTypes
-Type=Scalable
+Type=Fixed
 
 [mimes/32]
 Size=32
 Context=MimeTypes
-Type=Scalable
+Type=Fixed
 
 [mimes/48]
 Size=48
@@ -86,20 +90,22 @@ Size=64
 Context=MimeTypes
 Type=Scalable
 
+# Places -------------------------------------------------------------
+
 [places/16]
 Size=16
 Context=Places
-Type=Scalable
+Type=Fixed
 
 [places/24]
 Size=24
 Context=Places
-Type=Scalable
+Type=Fixed
 
 [places/32]
 Size=32
 Context=Places
-Type=Scalable
+Type=Fixed
 
 [places/48]
 Size=48
