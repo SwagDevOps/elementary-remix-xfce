@@ -17,7 +17,7 @@ Theme will be installed in ``/usr/local/share/icons``, but you can choose
 another location:
 
 ```sh
-rake install[$(readlink -f ~)/.local/share/icons]
+rake install[~/.local/share/icons]
 ```
 
 To uninstall:
