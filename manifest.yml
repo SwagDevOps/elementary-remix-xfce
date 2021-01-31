@@ -1,5 +1,5 @@
 ---
-icons_path: '/usr/local/share/icons'
+icons_path: '~/.local/share/icons'
 themes:
   elementary-remix-xfce:
     - 'index.theme'
