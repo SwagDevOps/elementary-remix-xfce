@@ -1,6 +1,4 @@
 # frozen_string_literal: true
 
 # caches ------------------------------------------------------------
-task :caches do
-  Setup.new.call(:caches)
-end
+task(:caches) { Setup.new.call(:caches) }

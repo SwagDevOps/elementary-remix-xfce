@@ -2,7 +2,7 @@
 
 # install ------------------------------------------------------------
 
-desc 'Install theme'
-task :install, [:path] => [:caches, :uninstall] do |_, args|
-  Setup.new(args[:path]).call(:install)
+ENV['icons_path'].tap do |icons_path|
+  desc 'Install theme'
+  task(:install => [:caches, :uninstall]) { Setup.new(icons_path).call(:install) }
 end

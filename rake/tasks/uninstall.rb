@@ -2,7 +2,7 @@
 
 # uninstall ----------------------------------------------------------
 
-desc 'Uninstall theme'
-task :uninstall, [:path] do |_, args|
-  Setup.new(args[:path]).call(:uninstall)
+ENV['icons_path'].tap do |icons_path|
+  desc 'Uninstall theme'
+  task(:uninstall) { Setup.new(icons_path).call(:uninstall) }
 end
